@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Resultado</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">Sistema Electoral</div>
+
+<nav>
+<a href="/">Inicio</a>
+<a href="/registro">Registrar</a>
+<a href="/consulta">Consultar</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Resultado de la consulta</h1>
+
+{% if ciudadano %}
+
+<div class="resultado">
+
+<p><b>Número de identificación:</b> {{ ciudadano.documento }}</p>
+
+<p><b>Lugar de votación:</b> {{ ciudadano.lugar_votacion }}</p>
+
+<p><b>Dirección:</b> {{ ciudadano.direccion }}</p>
+
+<p><b>Mesa:</b> {{ ciudadano.mesa }}</p>
+
+<p><b>Zona:</b> {{ ciudadano.zona }}</p>
+
+</div>
+
+{% else %}
+
+<p>Ciudadano no encontrado</p>
+
+{% endif %}
+
+</div>
+
+</section>
+
+</body>
+</html>

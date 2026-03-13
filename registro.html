@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Consulta</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">Sistema Electoral</div>
+
+<nav>
+<a href="/">Inicio</a>
+<a href="/registro">Registrar</a>
+<a href="/consulta">Consultar</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Consultar puesto de votación</h1>
+
+<form action="/buscar" method="POST">
+
+<input type="text" name="documento" placeholder="Número de identificación" required>
+
+<button type="submit" class="btn-principal">Consultar</button>
+
+</form>
+
+</div>
+
+</section>
+
+</body>
+</html>
